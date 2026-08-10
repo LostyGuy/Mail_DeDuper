@@ -106,8 +106,6 @@ def get_shared_email() -> None:
     # if os.path.exists(LIST_OF_SHARED_EMAILS):
     #     open(LIST_OF_SHARED_EMAILS, "w").close()
     
-    
-
 def extract_message_id(filepath: str) -> str | None:
 
     date_match = re.search(r"(\d{4})(\d{2})(\d{2})\d*\.imap$", filepath)
