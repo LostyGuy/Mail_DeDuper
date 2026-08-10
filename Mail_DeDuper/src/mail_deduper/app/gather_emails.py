@@ -69,11 +69,14 @@ def get_shared_email() -> None:
                 f"find {SHARED_INBOX_LOCATION} -path '*/[0-9][0-9]_*/*.imap' > {LIST_OF_SHARED_EMAILS}",
                 shell=True
             )
+        
     elif WAS_ENTIRE_SHARED_FOLDER_SCANNED == "TRUE":
         sp.run(
                 f"find {SHARED_INBOX_LOCATION} -path '*/[0-9][0-9]_*/*.imap' -mtime +{lc.SCAN_XYZ_DAYS_BACK} > {LIST_OF_SHARED_EMAILS}",
                 shell=True
-            )         
+            )
+        #TODO ---- Set Environmental Value to 'TRUE' ----
+        
     else:
         log_error("gather_emails.py: ", "Invalid Value Has Been Passed. \n", f"WAS_ENTIRE_SHARED_FOLDER_SCANNED: {lc.WAS_ENTIRE_SHARED_FOLDER_SCANNED} \n")
         raise ValueError("Invalid Value Has Been Passed")
