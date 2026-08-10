@@ -12,7 +12,7 @@ if __name__ == "__main__":
     #TODO---- If crucial files are present ----
     
     load_environmental_values()
-    from Mail_DeDuper.src.mail_deduper.app.load_config import assign_environmental_to_variables as lc
+    from src.mail_deduper.app.load_config import assign_environmental_to_variables as lc
     
     get_shared_email()
     get_users_inboxes()

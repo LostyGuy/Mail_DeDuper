@@ -16,6 +16,7 @@ def load_environmental_values() -> None :
         de.load_dotenv(dotenv_path=BASE_DIR / "Mail_DeDuper" / "src" / "mail_deduper" / "config" / "find_config.env")
         de.load_dotenv(dotenv_path=BASE_DIR / "Mail_DeDuper" / "src" / "mail_deduper" / "config" / "move_config.env")
         de.load_dotenv(dotenv_path=BASE_DIR / "Mail_DeDuper" / "src" / "mail_deduper" / "config" / "remove_config.env")
+        de.load_dotenv(dotenv_path=BASE_DIR / "Mail_DeDuper" / "src" / "mail_deduper" / "config" / "main_config.env")
     except Exception as e:
         print(e)
     
