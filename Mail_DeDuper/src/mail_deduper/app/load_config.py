@@ -4,7 +4,7 @@ import datetime as dt
 
 import dotenv as de
 
-from Mail_DeDuper.main import BASE_DIR 
+BASE_DIR = Path(__file__).resolve().parents[3]
 
 
 def _get_environmental_values(variable: str):
@@ -13,10 +13,10 @@ def _get_environmental_values(variable: str):
 def load_environmental_values() -> None :
     
     try:
-        de.load_dotenv(dotenv_path=BASE_DIR / "Mail_DeDuper" / "src" / "mail_deduper" / "config" / "find_config.env")
-        de.load_dotenv(dotenv_path=BASE_DIR / "Mail_DeDuper" / "src" / "mail_deduper" / "config" / "move_config.env")
-        de.load_dotenv(dotenv_path=BASE_DIR / "Mail_DeDuper" / "src" / "mail_deduper" / "config" / "remove_config.env")
-        de.load_dotenv(dotenv_path=BASE_DIR / "Mail_DeDuper" / "src" / "mail_deduper" / "config" / "main_config.env")
+        de.load_dotenv(dotenv_path=BASE_DIR / "src" / "mail_deduper" / "config" / "find_config.env")
+        de.load_dotenv(dotenv_path=BASE_DIR / "src" / "mail_deduper" / "config" / "move_config.env")
+        de.load_dotenv(dotenv_path=BASE_DIR / "src" / "mail_deduper" / "config" / "remove_config.env")
+        de.load_dotenv(dotenv_path=BASE_DIR / "src" / "mail_deduper" / "config" / "main_config.env")
     except Exception as e:
         print(e)
     
