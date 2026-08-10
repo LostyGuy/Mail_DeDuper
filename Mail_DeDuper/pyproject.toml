@@ -1,0 +1,21 @@
+[project]
+name = "mail-deduper"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "LostyGuy", email = "89598637+LostyGuy@users.noreply.github.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "logging>=0.4.9.6",
+    "python-dotenv>=1.2.2",
+    "sqlalchemy>=2.0.51",
+]
+
+[project.scripts]
+mail-deduper = "mail_deduper:main"
+
+[build-system]
+requires = ["uv_build>=0.12.2,<0.13.0"]
+build-backend = "uv_build"
