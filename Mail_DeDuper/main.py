@@ -8,7 +8,7 @@ from Mail_DeDuper.src.mail_deduper.app.load_config import assign_environmental_t
 from src.mail_deduper.logs import log_error
 
 if __name__ == "__main__":
-    BASE_DIR = Path(__file__).resolve()
+    BASE_DIR = Path(__file__).resolve().parent
     
     #TODO---- If crucial files are present ----
     
