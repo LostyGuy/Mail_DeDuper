@@ -21,8 +21,8 @@ SHARED_INBOX_LOCATION = lc.SHARED_INBOX_LOCATION
 MARK_OLDER_THAN = lc.MARK_OLDER_THAN
 WAS_ENTIRE_SHARED_FOLDER_SCANNED = lc.WAS_ENTIRE_SHARED_FOLDER_SCANNED
 
-LIST_OF_INBOXES_PATH = Path(BASE_DIR, "Mail_DeDuper", "lists_of", "list_of_inboxes.txt")
-LIST_OF_SHARED_EMAILS = Path(BASE_DIR, "Mail_DeDuper", "lists_of", "list_of_shared_emails.txt")
+LIST_OF_INBOXES_PATH = Path(BASE_DIR, "lists_of", "list_of_inboxes.txt")
+LIST_OF_SHARED_EMAILS = Path(BASE_DIR, "lists_of", "list_of_shared_emails.txt")
 
 def get_users_inboxes() -> None:
     '''

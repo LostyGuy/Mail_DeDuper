@@ -13,17 +13,17 @@ def _get_environmental_values(variable: str):
 def load_environmental_values() -> None :
     
     try:
-        de.load_dotenv(dotenv_path=BASE_DIR / "src" / "mail_deduper" / "config" / "find_config.env")
-        de.load_dotenv(dotenv_path=BASE_DIR / "src" / "mail_deduper" / "config" / "move_config.env")
-        de.load_dotenv(dotenv_path=BASE_DIR / "src" / "mail_deduper" / "config" / "remove_config.env")
-        de.load_dotenv(dotenv_path=BASE_DIR / "src" / "mail_deduper" / "config" / "main_config.env")
+        de.load_dotenv(dotenv_path=BASE_DIR / "src" / "config" / "find_config.env")
+        de.load_dotenv(dotenv_path=BASE_DIR / "src" / "config" / "move_config.env")
+        de.load_dotenv(dotenv_path=BASE_DIR / "src" / "config" / "remove_config.env")
+        de.load_dotenv(dotenv_path=BASE_DIR / "src" / "config" / "main_config.env")
     except Exception as e:
         print(e)
     
 def load_excluded_users_from_deduplication() -> set[str]:
     '''Loads usernames that should be skipped during deduplication'''
     
-    EXCLUDE_FROM_DEDUPLICATION_PATH = Path(BASE_DIR, "Mail_De_Duper", "lists_of", "list_of_excluded_users_from_deduplication.txt")
+    EXCLUDE_FROM_DEDUPLICATION_PATH = Path(BASE_DIR, "lists_of", "list_of_excluded_users_from_deduplication.txt")
     
     excluded = set()
     with open(EXCLUDE_FROM_DEDUPLICATION_PATH) as f:
@@ -37,7 +37,7 @@ def load_excluded_users_from_deduplication() -> set[str]:
 def load_excluded_users_from_moving() -> set[str]:
     '''Loads usernames that should be skipped during moving'''
     
-    EXCLUDE_FROM_MOVING_PATH = Path(BASE_DIR, "Mail_De_Duper", "lists_of", "list_of_excluded_users_from_moving.txt")
+    EXCLUDE_FROM_MOVING_PATH = Path(BASE_DIR, "lists_of", "list_of_excluded_users_from_moving.txt")
         
     excluded = set()
     with open(EXCLUDE_FROM_MOVING_PATH) as f:
@@ -51,7 +51,7 @@ def load_excluded_users_from_moving() -> set[str]:
 def load_excluded_users_from_removing() -> set[str]:
     '''Loads usernames that should be skipped during removing'''
     
-    EXCLUDE_FROM_REMOVING_PATH = Path(BASE_DIR, "Mail_De_Duper", "lists_of", "list_of_excluded_users_from_removing.txt")
+    EXCLUDE_FROM_REMOVING_PATH = Path(BASE_DIR, "lists_of", "list_of_excluded_users_from_removing.txt")
         
     excluded = set()
     with open(EXCLUDE_FROM_REMOVING_PATH) as f:

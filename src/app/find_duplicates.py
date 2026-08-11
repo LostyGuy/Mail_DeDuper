@@ -17,9 +17,9 @@ MARK_OLDER_THAN = lc.MARK_OLDER_THAN
 
 EXCLUDED_USERS = load_excluded_users_from_deduplication()
 
-LIST_OF_INBOXES_PATH = Path(BASE_DIR, "Mail_DeDuper", "lists_of", "list_of_inboxes.txt")
-LIST_OF_SHARED_EMAILS_PATH = Path(BASE_DIR, "Mail_DeDuper", "lists_of", "list_of_shared_emails.txt")
-FOLDER_FOR_LISTS_OF_DUPES_LOCATION = Path(BASE_DIR, "Mail_DeDuper", "lists_of", "lists_of_duped_mails")
+LIST_OF_INBOXES_PATH = Path(BASE_DIR, "lists_of", "list_of_inboxes.txt")
+LIST_OF_SHARED_EMAILS_PATH = Path(BASE_DIR, "lists_of", "list_of_shared_emails.txt")
+FOLDER_FOR_LISTS_OF_DUPES_LOCATION = Path(BASE_DIR, "lists_of", "lists_of_duped_mails")
 DUPED_MAILS_STATISTICS_FOLDER_LOCATION = Path(BASE_DIR)
 
 def find_dupes() -> None:

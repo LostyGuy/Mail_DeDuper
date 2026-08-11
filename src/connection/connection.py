@@ -4,9 +4,9 @@ from contextlib import contextmanager
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-from main import BASE_DIR 
+from src.app.paths import BASE_DIR 
 
-SQLLITE_DATABASE_URL = f"sqlite:///{Path(BASE_DIR,"lists_of", "list_of_shared_emails.db")}"
+SQLLITE_DATABASE_URL = f"sqlite:///{Path(BASE_DIR, "lists_of", "list_of_shared_emails.db")}"
 
 Engine = create_engine(SQLLITE_DATABASE_URL)
 SessionLocal = sessionmaker(bind= Engine, autoflush= False, autocommit= False,)
