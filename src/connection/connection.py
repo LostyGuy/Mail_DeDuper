@@ -4,7 +4,7 @@ from contextlib import contextmanager
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-from Mail_DeDuper.main import BASE_DIR 
+from main import BASE_DIR 
 
 SQLLITE_DATABASE_URL = f"sqlite:///{Path(BASE_DIR,"lists_of", "list_of_shared_emails.db")}"
 

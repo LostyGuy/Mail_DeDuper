@@ -5,13 +5,14 @@ import datetime as dt
 import re
 from pathlib import Path
 
+from src.connection import connection as conn
 from sqlalchemy import Select, Insert
 import sqlite3
 
-from Mail_DeDuper.src.mail_deduper.app.load_config import assign_environmental_to_variables as lc
-from Mail_DeDuper.src.mail_deduper.logs import log_error
-from Mail_DeDuper.src.mail_deduper.connection import models, connection as conn
-from Mail_DeDuper.main import BASE_DIR 
+from src.app.load_config import assign_environmental_to_variables as lc
+from src.logs import log_error
+from src.connection import models
+from app import BASE_DIR 
 
 
 DOMAIN_PATH = lc.DOMAIN_LOCATION

@@ -3,12 +3,12 @@ import shutil
 import glob
 from pathlib import Path
 
-from Mail_DeDuper.src.mail_deduper.app.load_config import assign_environmental_to_variables as lc
-from Mail_DeDuper.src.mail_deduper.app.load_config import load_excluded_users_from_deduplication
+from src.app.load_config import assign_environmental_to_variables as lc
+from src.app.load_config import load_excluded_users_from_deduplication
 
-from Mail_DeDuper.src.mail_deduper.app.progress_bar import print_progress
-from Mail_DeDuper.src.mail_deduper.app.gather_emails import  extract_message_id
-from Mail_DeDuper.main import BASE_DIR 
+from src.app.progress_bar import print_progress
+from src.app.gather_emails import  extract_message_id
+from app import BASE_DIR 
 
 DOMAIN_LOCATION = lc.DOMAIN_LOCATION
 USERS_INBOX_LOCATION = lc.USERS_INBOX_LOCATION

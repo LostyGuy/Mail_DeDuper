@@ -3,8 +3,8 @@ import shutil
 from pathlib import Path
 import glob
 
-from Mail_DeDuper.src.mail_deduper.app.load_config import assign_environmental_to_variables as lc
-from Mail_DeDuper.src.mail_deduper.logs import log_error
+from src.app.load_config import assign_environmental_to_variables as lc
+from src.logs import log_error
 
 
 def _parse_selected_inboxes(raw_value):

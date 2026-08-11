@@ -50,7 +50,7 @@ sdist = { url = "https://files.pythonhosted.org/packages/93/4b/979db9e44be09f71e
 [[package]]
 name = "mail-deduper"
 version = "0.1.0"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "logging" },
     { name = "python-dotenv" },
