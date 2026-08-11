@@ -8,7 +8,7 @@ from src.app.load_config import load_excluded_users_from_deduplication
 
 from src.app.progress_bar import print_progress
 from src.app.gather_emails import  extract_message_id
-from app import BASE_DIR 
+from src.app.paths import BASE_DIR 
 
 DOMAIN_LOCATION = lc.DOMAIN_LOCATION
 USERS_INBOX_LOCATION = lc.USERS_INBOX_LOCATION

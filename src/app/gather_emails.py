@@ -12,7 +12,7 @@ import sqlite3
 from src.app.load_config import assign_environmental_to_variables as lc
 from src.logs import log_error
 from src.connection import models
-from app import BASE_DIR 
+from src.app.paths import BASE_DIR 
 
 
 DOMAIN_PATH = lc.DOMAIN_LOCATION

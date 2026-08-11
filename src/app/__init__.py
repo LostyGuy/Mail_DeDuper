@@ -7,5 +7,3 @@ __all__ = [
     "assign_environmental_to_variables",
     "global_constants",
 ]
-
-BASE_DIR = Path(__file__).resolve().parent.parent
