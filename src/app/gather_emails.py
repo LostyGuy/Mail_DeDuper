@@ -10,17 +10,17 @@ from sqlalchemy import Select, Insert
 import sqlite3
 
 from src.app.load_config import assign_environmental_to_variables as lc
-from src.logs import log_error
+from src.logs.log_config import log_error
 from src.connection import models
 from src.app.paths import BASE_DIR 
 
 
 DOMAIN_PATH = lc.DOMAIN_LOCATION
-USERS_INBOX_LOCATION = lc.USERS_INBOX_LOCATION
 SHARED_INBOX_LOCATION = lc.SHARED_INBOX_LOCATION
 MARK_OLDER_THAN = lc.MARK_OLDER_THAN
 WAS_ENTIRE_SHARED_FOLDER_SCANNED = lc.WAS_ENTIRE_SHARED_FOLDER_SCANNED
 
+USERS_INBOX_LOCATION = Path(BASE_DIR, "lists_of", "lists_of_duped_mails")
 LIST_OF_INBOXES_PATH = Path(BASE_DIR, "lists_of", "list_of_inboxes.txt")
 LIST_OF_SHARED_EMAILS = Path(BASE_DIR, "lists_of", "list_of_shared_emails.txt")
 

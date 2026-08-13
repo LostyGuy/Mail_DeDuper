@@ -4,7 +4,7 @@ from src.app.load_config import load_environmental_values
 from src.app.gather_emails import get_shared_email, get_users_inboxes, get_users_emails
 from src.app.find_duplicates import find_dupes
 from src.app.move_duplicates import start_move_sequence
-from src.logs import log_error
+from src.logs.log_config import log_error
 
 if __name__ == "__main__":
     
@@ -12,6 +12,8 @@ if __name__ == "__main__":
     
     load_environmental_values()
     from src.app.load_config import assign_environmental_to_variables as lc
+    
+    #---- Create Required Folders ----
     
     get_shared_email()
     get_users_inboxes()

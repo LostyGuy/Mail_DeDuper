@@ -17,6 +17,7 @@ def load_environmental_values() -> None :
         de.load_dotenv(dotenv_path=BASE_DIR / "src" / "config" / "move_config.env")
         de.load_dotenv(dotenv_path=BASE_DIR / "src" / "config" / "remove_config.env")
         de.load_dotenv(dotenv_path=BASE_DIR / "src" / "config" / "main_config.env")
+        de.load_dotenv(dotenv_path=BASE_DIR / "src" / "config" / "log_config.env")
     except Exception as e:
         print(e)
     
@@ -65,27 +66,31 @@ def load_excluded_users_from_removing() -> set[str]:
 class assign_environmental_to_variables():
     
     #---- master_config.env ----
-    WAS_ENTIRE_SHARED_FOLDER_SCANNED = _get_environmental_values("WAS_ENTIRE_SHARED_FOLDER_SCANNED")
+    WAS_ENTIRE_SHARED_FOLDER_SCANNED = _get_environmental_values("WAS_ENTIRE_SHARED_FOLDER_SCANNED").upper()
     SCAN_XYZ_DAYS_BACK = _get_environmental_values("SCAN_XYZ_DAYS_BACK")
     
     #---- find_config.env ----
     SHARED_INBOX_LOCATION = _get_environmental_values("SHARED_INBOX_LOCATION")
     USERS_INBOX_LOCATION = _get_environmental_values("USERS_INBOX_LOCATION")
     DOMAIN_LOCATION = _get_environmental_values("DOMAIN_LOCATION")
-    FULL_SCAN = _get_environmental_values("FULL_SCAN")
-    SCAN_USER = _get_environmental_values("SCAN_USER")
-    MARK_OLDER_THAN = _get_environmental_values("MARK_OLDER_THAN")
+    FULL_SCAN = _get_environmental_values("FULL_SCAN").upper()
+    SCAN_USER = _get_environmental_values("SCAN_USER").lower()
+    MARK_OLDER_THAN = int(_get_environmental_values("MARK_OLDER_THAN"))
     
     #---- move_config.env ----
-    MOVE_MODE = _get_environmental_values("MOVE_MODE")
-    FULL_MOVE = _get_environmental_values("FULL_MOVE")
-    SELECTED_INBOXES_TO_MOVE = _get_environmental_values("SELECTED_INBOXES_TO_MOVE")
-    MOVE_DUPES_TO_FOLDER = _get_environmental_values("MOVE_DUPES_TO_FOLDER")
+    MOVE_MODE = _get_environmental_values("MOVE_MODE").upper()
+    FULL_MOVE = _get_environmental_values("FULL_MOVE").upper()
+    SELECTED_INBOXES_TO_MOVE = _get_environmental_values("SELECTED_INBOXES_TO_MOVE").lower()
+    MOVE_DUPES_TO_FOLDER = _get_environmental_values("MOVE_DUPES_TO_FOLDER").lower()
     
     #---- remove_config.env ----
-    REMOVE_MODE = _get_environmental_values("REMOVE_MODE")
-    FULL_REMOVE = _get_environmental_values("FULL_REMOVE")
-    SELECTED_INBOXES_TO_REMOVE = _get_environmental_values("SELECTED_INBOXES_TO_REMOVE")
+    REMOVE_MODE = _get_environmental_values("REMOVE_MODE").upper()
+    FULL_REMOVE = _get_environmental_values("FULL_REMOVE").upper()
+    SELECTED_INBOXES_TO_REMOVE = _get_environmental_values("SELECTED_INBOXES_TO_REMOVE").lower()
+    
+    #---- log_config.env ----
+    LOG_LEVEL = _get_environmental_values("LOG_LEVEL").upper()
+    LOG_LOCATION = _get_environmental_values("LOG_LOCATION")
     
 class global_constants():
     

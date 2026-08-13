@@ -4,7 +4,7 @@ from pathlib import Path
 import glob
 
 from src.app.load_config import assign_environmental_to_variables as lc
-from src.logs import log_error
+from src.logs.log_config import log_error
 
 
 def _parse_selected_inboxes(raw_value):
