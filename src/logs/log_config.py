@@ -3,23 +3,24 @@ from pathlib import Path
 
 import logging as log
 
-from src.app.load_config import assign_environmental_to_variables as lc
+from src.app.load_config import assign_environmental_to_variables
 
-BASE_DIR = Path(__file__).resolve().parent
 
-LOG_LOCATION = lc.LOG_LOCATION
-LOG_LEVEL = lc.LOG_LEVEL
-if LOG_LEVEL == "INFO":
-    LOG_LEVEL = log.INFO
-elif LOG_LEVEL == "ERROR":
-    LOG_LEVEL = log.ERROR
+config = assign_environmental_to_variables()
 
-log.basicConfig(
-    filename=Path(LOG_LOCATION, f"{dt.datetime.now()}_log.txt"),
-    filemode='a',
-    level=LOG_LEVEL,
-    force=True,
-)
+def logger_initialization():
+    LOG_LEVEL = config.LOG_LEVEL
+    if LOG_LEVEL == "INFO":
+        LOG_LEVEL = log.INFO
+    elif LOG_LEVEL == "ERROR":
+        LOG_LEVEL = log.ERROR
+
+    log.basicConfig(
+        filename=Path("runtime_logs", f"{dt.datetime.now()}_log.txt"),
+        filemode='a',
+        level=LOG_LEVEL,
+        force=True,
+    )
 
 def log_info(*message) -> None:
     log.info(20*'-')
