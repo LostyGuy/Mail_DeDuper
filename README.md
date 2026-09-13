@@ -1,27 +1,12 @@
-<h1 style="
-padding: 15px; margin-bottom: 15px;
-border-radius: 10px; 
-background-color: blue; 
-color: white; text-align: center;
-">
+<h1 style="padding: 15px; margin-bottom: 15px; border-radius: 10px; background-color: blue; color: white; text-align: center;">
 Mail De Duper
 </h1>
 
-<div class="badges" style="
-padding: 15px; margin-bottom: 15px;
-border-radius: 10px; 
-background-color: #4b4b4b50;
-color: white;
-">
+<div class="badges" style="padding: 15px; margin-bottom: 15px; border-radius: 10px; background-color: #4b4b4b50;color: white;">
     
 </div>
 
-<div class="badges" style="
-padding: 15px; margin-bottom: 15px;
-border-radius: 10px; 
-background-color: #4b4b4b50;
-color: white;
-">
+<div class="badges" style="padding: 15px; margin-bottom: 15px; border-radius: 10px; background-color: #4b4b4b50;color: white;">
     <h2 style="text-align: center;">What Is It?</h2>
     <hr>
     <section style="text-align: justify; padding: 0px 30px;">
@@ -29,12 +14,7 @@ color: white;
     </section>
 </div>
 
-<div class="badges" style="
-padding: 15px; margin-bottom: 15px;
-border-radius: 10px; 
-background-color: #4b4b4b50;
-color: white;
-">
+<div class="badges" style="padding: 15px; margin-bottom: 15px; border-radius: 10px; background-color: #4b4b4b50;color: white;">
     <h2 style="text-align: center;">The Solution</h2>
     <hr>
     <section style="text-align: justify; padding: 0px 30px;">
@@ -42,12 +22,7 @@ color: white;
     </section>
 </div>
 
-<div class="badges" style="
-padding: 15px; margin-bottom: 15px;
-border-radius: 10px; 
-background-color: #4b4b4b50;
-color: white;
-">
+<div class="badges" style="padding: 15px; margin-bottom: 15px; border-radius: 10px; background-color: #4b4b4b50;color: white;">
     <h2 style="text-align: center;">How To Run It</h2>
     <hr>
     <section style="text-align: justify; padding: 0px 30px;">
